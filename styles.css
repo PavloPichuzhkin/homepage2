@@ -73,14 +73,14 @@ body {
 
 .contact-info__header {
     color: var(--primary-text-color);
-    margin-bottom: 15px;
+    margin-bottom: 12px;
     text-decoration-color: var(--text-decoration-color);
     text-decoration-line: underline;
 }
 
 .contact-info__sub-header {
     color: var(--secondary-text-color);
-    margin-bottom: 30px;
+    margin-bottom: 16px;
 }
 
 .contact-info__block {
@@ -122,8 +122,8 @@ body {
 
 .contact-info__avatar {
     border-radius: 50%;
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
     object-fit: cover;
     border: 3px solid;
     border-color: var(--text-decoration-color);
