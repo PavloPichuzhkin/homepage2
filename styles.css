@@ -7,6 +7,7 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.5;
+    background-color: rgba(255, 154, 0, 0.05);
 
     --primary-text-color: #181820;
     --secondary-text-color: #5c5c62;
@@ -14,6 +15,7 @@ body {
     --icon-color: #6a737d;
     --border-color: #ff9a0045;
     --text-decoration-color: #ff9a00;
+    --hover-color: #ff9a00;
 }
 
 .container {
@@ -35,9 +37,11 @@ body {
 }
 
 .resume {
+    background-color: rgba(255, 154, 0, 0.08);
+
     margin: 50px auto;
-    border: 1px solid #f5f5f5;
-    box-shadow: 1px 1px 7px 7px #f5f5f5;
+    border: 1px solid rgba(255, 154, 0, 0.25);
+    box-shadow: 1px 1px 7px 7px rgba(255, 154, 0, 0.15);
     padding: 30px 0;
     max-width: 900px;
 }
@@ -66,6 +70,7 @@ body {
         margin-right: 0;
     }
 }
+
 .contact-info__header,
 .contact-info__sub-header {
     text-align: center;
@@ -73,14 +78,14 @@ body {
 
 .contact-info__header {
     color: var(--primary-text-color);
-    margin-bottom: 15px;
+    margin-bottom: 12px;
     text-decoration-color: var(--text-decoration-color);
     text-decoration-line: underline;
 }
 
 .contact-info__sub-header {
     color: var(--secondary-text-color);
-    margin-bottom: 30px;
+    margin-bottom: 16px;
 }
 
 .contact-info__block {
@@ -100,13 +105,21 @@ body {
     justify-content: start;
 }
 
+.contact-info__item:hover {
+    color: var(--hover-color);
+
+    .contact-info__item-icon path {
+        fill: var(--hover-color);
+    }
+}
+
 .contact-info__item:not(:last-child) {
     margin-bottom: 20px;
 }
 
 .contact-info__item-icon-wrapper {
     margin-right: 10px;
-    width: 20px;
+    width: 26px;
     display: flex;
     justify-content: center;
 }
@@ -116,17 +129,26 @@ body {
 }
 
 .contact-info__item-icon {
-    height: 1.1428rem;
+    height: 24px;
+    width: 26px;
     vertical-align: text-bottom;
 }
 
 .contact-info__avatar {
     border-radius: 50%;
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
     object-fit: cover;
     border: 3px solid;
     border-color: var(--text-decoration-color);
+    transition-duration: 500ms;
+
+}
+
+.contact-info__avatar:hover {
+    transform: scale(1.8);
+    transition-duration: 500ms;
+
 }
 
 .intro {
@@ -164,6 +186,16 @@ body {
 .skills__text {
     color: var(--secondary-text-color);
     text-align: justify;
+    list-style-type: none;
+}
+
+.skills__text li {
+    margin-bottom: 4px;
+}
+
+.skills__text li::before {
+    content: "\1F680";
+    padding-right: 6px;
 }
 
 .experiences {
