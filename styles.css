@@ -7,6 +7,7 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.5;
+    background-color: rgba(255, 154, 0, 0.05);
 
     --primary-text-color: #181820;
     --secondary-text-color: #5c5c62;
@@ -14,6 +15,7 @@ body {
     --icon-color: #6a737d;
     --border-color: #ff9a0045;
     --text-decoration-color: #ff9a00;
+    --hover-color: #ff9a00;
 }
 
 .container {
@@ -35,9 +37,11 @@ body {
 }
 
 .resume {
+    background-color: rgba(255, 154, 0, 0.08);
+
     margin: 50px auto;
-    border: 1px solid #f5f5f5;
-    box-shadow: 1px 1px 7px 7px #f5f5f5;
+    border: 1px solid rgba(255, 154, 0, 0.25);
+    box-shadow: 1px 1px 7px 7px rgba(255, 154, 0, 0.15);
     padding: 30px 0;
     max-width: 900px;
 }
@@ -101,6 +105,14 @@ body {
     justify-content: start;
 }
 
+.contact-info__item:hover {
+    color: var(--hover-color);
+
+    .contact-info__item-icon path {
+        fill: var(--hover-color);
+    }
+}
+
 .contact-info__item:not(:last-child) {
     margin-bottom: 20px;
 }
@@ -129,6 +141,14 @@ body {
     object-fit: cover;
     border: 3px solid;
     border-color: var(--text-decoration-color);
+    transition-duration: 500ms;
+
+}
+
+.contact-info__avatar:hover {
+    transform: scale(1.8);
+    transition-duration: 500ms;
+
 }
 
 .intro {
@@ -174,7 +194,7 @@ body {
 }
 
 .skills__text li::before {
-    content:  "\1F680";
+    content: "\1F680";
     padding-right: 6px;
 }
 
